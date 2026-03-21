@@ -15,6 +15,11 @@
 - Handles payment
 
 ## Non Functional Requirement
+- Low Latency
+- High Availability
+- Scalable
+- Concurrency (No double booking)
+- Fault Tolerance
 
 
 ## Design Patterns
