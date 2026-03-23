@@ -1,3 +1,3 @@
 public interface PricingStrategy {
-    public double calculatefare();
+    public double calculatefare(TripMetaData data);
 }
