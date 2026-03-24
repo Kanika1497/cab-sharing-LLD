@@ -1,3 +1,3 @@
 public interface DriverMatchingStrategy {
-    public Driver matchDriver();
+    public Driver matchDriver(TripMetaData data);
 }
