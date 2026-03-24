@@ -1,10 +1,10 @@
 import java.util.List;
 
 public class NearestDriverStrategy implements DriverMatchingStrategy{
-    private DriverManager driverManager;
+   // private DriverManager driverManager;
     @Override
     public Driver matchDriver(TripMetaData data) {
-        List<Driver> availableDriver=driverManager.availableDriver();
+        List<Driver> availableDriver=DriverManager.getInstance().availableDriver();
         Driver nearestDriver=null;
         double minDist= Double.MAX_VALUE;
         for(Driver d: availableDriver){

@@ -23,4 +23,14 @@ public class RiderManager {
         return riders.get(id);
     }
 
+    public void acceptRide(Trip trip){
+        trip.setStatus(TripStatus.ONGOING);
+    }
+    public void cancelRide(Trip trip,Driver driver){
+        trip.setStatus(TripStatus.CANCELLED);
+        driver.setAvailable(true);
+    }
+
+
+
 }

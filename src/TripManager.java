@@ -41,7 +41,7 @@ public class TripManager {
 
         trips.put(trip.getTripId(),trip);
 
-        System.out.println("Trip created with driver " +driver.getName() + " Fare =" +fare);
+        System.out.println(rider.getName() + "'s trip is created with driver " +driver.getName() + " Fare =" +fare);
 
         return trip;
     }

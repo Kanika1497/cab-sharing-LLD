@@ -11,9 +11,9 @@ public class DriverManager {
         if(instance==null){
             return instance = new DriverManager();
         }
-        else{
+
             return instance;
-        }
+
     }
 
     public void addDrivers(Driver driver){
