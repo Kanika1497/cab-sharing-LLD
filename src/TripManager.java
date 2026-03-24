@@ -8,8 +8,8 @@ public class TripManager {
     public TripManager (){
     }
 
-    public TripManager getInstance(){
-        if(instance==null) return new TripManager();
+    public  static TripManager getInstance(){
+        if(instance==null) return instance =new TripManager();
         return instance;
     }
 

@@ -4,11 +4,11 @@ public class Driver {
     private Location location;
     private boolean isAvailable;
 
-    public Driver(String id, String name, Location location, boolean isAvailable) {
+    public Driver(String id, String name, Location location) {
         this.id = id;
         this.name = name;
         this.location = location;
-        this.isAvailable = isAvailable;
+        this.isAvailable = true;
     }
 
     public String getId() {

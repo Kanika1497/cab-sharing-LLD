@@ -2,16 +2,30 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        RiderManager riderManager=RiderManager.getInstance();
+        DriverManager driverManager=DriverManager.getInstance();
+        TripManager tripManager=TripManager.getInstance();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        riderManager.addRider(new Rider("R1","Kanika",new Location(0,0)));
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        driverManager.addDrivers(new Driver("D1","LalChand",new Location(2,4)));
+        driverManager.addDrivers(new Driver("D2","Suresh",new Location(1,5)));
+
+        Trip trip=tripManager.createTrip("R1",new Location(0,0),new Location(10,10));
+
+
+        //Start trip
+        if(trip!=null){
+            trip.setStatus(TripStatus.ONGOING);
         }
+
+        // Complete trip
+        if(trip!=null){
+            tripManager.completeTrip(trip.getTripId());
+        }
+        else{
+            System.out.println("Trip cannot be created !");
+        }
+
     }
 }
