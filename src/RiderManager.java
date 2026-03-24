@@ -7,9 +7,9 @@ public class RiderManager {
 
     public RiderManager(){}
 
-    public RiderManager getInstance(){
+    public static  RiderManager getInstance(){
         if(instance ==null){
-            return new RiderManager();
+            return instance=new RiderManager();
         }
         else {
             return instance;

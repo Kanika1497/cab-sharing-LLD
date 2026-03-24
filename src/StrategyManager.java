@@ -5,8 +5,10 @@ public class StrategyManager {
 
     public StrategyManager(){}
 
-    public StrategyManager getInstance(){
-        return Objects.requireNonNullElseGet(instance, StrategyManager::new);
+    public static StrategyManager getInstance(){
+        if(instance==null) instance=new StrategyManager();
+        return instance;
+        //return Objects.requireNonNullElseGet(instance, StrategyManager::new);
     }
 
     public PricingStrategy getPricingStrategy(TripMetaData data){

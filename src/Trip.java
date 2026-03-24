@@ -6,11 +6,11 @@ public class Trip {
     private TripStatus status;
     private double fare;
 
-    public Trip(String tripId, Rider rider, Driver driver, TripStatus status, double fare) {
+    public Trip(String tripId, Rider rider, Driver driver, double fare) {
         this.tripId = tripId;
         this.rider = rider;
         this.driver = driver;
-        this.status = status;
+        this.status = TripStatus.REQUESTED;
         this.fare = fare;
     }
 
@@ -32,5 +32,9 @@ public class Trip {
 
     public double getFare() {
         return fare;
+    }
+
+    public void setStatus(TripStatus status) {
+        this.status = status;
     }
 }

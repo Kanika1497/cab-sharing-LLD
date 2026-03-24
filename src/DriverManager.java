@@ -7,9 +7,9 @@ public class DriverManager {
     private final Map<String , Driver> drivers=new HashMap<>();
     public DriverManager (){}
 
-    public DriverManager getInstance(){
+    public static DriverManager getInstance(){
         if(instance==null){
-            return new DriverManager();
+            return instance = new DriverManager();
         }
         else{
             return instance;
